@@ -40,8 +40,12 @@ legend::before {
 }
 
 @media (max-width: 992px){
+  legend{
+    background-color: #EB6864;
+    padding: 1rem;
+  }
   legend::before{
-    height: 70px;
+    content: none;
   }
 }
 
