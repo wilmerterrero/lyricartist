@@ -43,6 +43,7 @@ legend::before {
   legend{
     background-color: #EB6864;
     padding: 1rem;
+    display: block;
   }
   legend::before{
     content: none;
