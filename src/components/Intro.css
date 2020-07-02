@@ -1,0 +1,25 @@
+.intro{
+    margin-bottom: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.intro li{
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 992px){
+    .intro h2{
+        font-size: 1.8rem; 
+     }
+    .intro li{
+       font-size: 1.3rem; 
+    }
+}
+
+.logo{
+    width: 400px;
+    max-width: 100%;
+    padding-bottom: 2rem;
+}
