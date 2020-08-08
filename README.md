@@ -1,6 +1,31 @@
 ![Lyricartist](https://res.cloudinary.com/wterrerocloud/image/upload/v1/myportfolio/portfolio/lyricartist_cudqfu.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Doble consulta de API usando Axios
+```javascript
+ const consultarAPIlyrics = async () => {
+
+      const { artista, cancion } = busquedaletra;
+
+      const url = `https://api.lyrics.ovh/v1/${artista}/${cancion}`;
+
+      const url2 = `https://theaudiodb.com/api/v1/json/1/search.php?s=coldplay&s=${artista}`;
+
+      //dos consultas al mismo tiempo
+      const [letra, informacion] = await Promise.all([
+        Axios(url),
+        Axios(url2)
+      ]);
+
+      setLetra(letra.data.lyrics);
+      setArtistaInfo(informacion.data.artists[0]);
+
+      // setLetra(resultado.data.lyrics);
+    }
+    consultarAPIlyrics();
+  }, [busquedaletra, artistainfo])
+```
+
 
 ## Available Scripts
 
