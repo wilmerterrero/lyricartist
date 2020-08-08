@@ -37,7 +37,6 @@ function App() {
       setLetra(letra.data.lyrics);
       setArtistaInfo(informacion.data.artists[0]);
 
-      // setLetra(resultado.data.lyrics);
     }
     consultarAPIlyrics();
   }, [busquedaletra, artistainfo])
